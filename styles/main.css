@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,400i,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(/assets/ocean.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#brand_name{
+    text-align: center;
+    color: #fff;
+    top: 30%;
+    position: absolute;
+    width:100%;
+    font-size: 4rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.searchbar_wrapper {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+#searchbar {
+    background: #fff;
+    width: 500px;
+    height: 50px;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+}
+
+#settings_icon{
+    bottom: 0;
+    margin: 1rem;
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#arrow_up{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    margin: 0 10% 1rem auto;
+    font-size: 1.75rem;
+    left: 50%;
+}
+
+#todo_list{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.25rem;
+    background-color: #fff;
+    padding: 0.5rem 4rem;
+    border-radius: 10px 10px 0 0;
+    margin: 0 3rem 0 0;
+}
