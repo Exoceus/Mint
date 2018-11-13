@@ -6,64 +6,263 @@
 }
 
 body{
-    background-image: url(/assets/ocean.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url(../assets/creamy_ocean.jpg);
+}
+
+nav{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+#hamburger_menu{
+    position: relative;
+    margin: 1.25rem 0 0 1.25rem;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: flex;
+    align-items: center;
+    transition: transform 500ms, transform 500ms  ease-in-out;
+    padding: 10px 0 0 0;
+    justify-content: center
+}
+
+.nav-toggle-label span {
+    height: 3px;
+    width: 2rem;
+    border-radius: 2px;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.05);
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 2rem;
+    border-radius: 2px;
+}
+
+.nav-toggle-label span::before {
+    bottom: 10px;
+}
+
+.nav-toggle-label span::after {
+    top: 10px;
+}
+
+
+.nav-toggle:checked~nav button {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+#user_info{
+    text-align: left;
 }
 
 #brand_name{
     text-align: center;
     color: #fff;
-    top: 30%;
+    top: 10%;
     position: absolute;
     width:100%;
     font-size: 4rem;
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.searchbar_wrapper {
+#user_info{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin: 1.25rem;
+    padding: 0 0 0 80%;
+}
+
+#user_icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#username{
+    line-height: 40px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    
+
+}
+
+#user_icon span{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, rgb(76, 130, 175), rgb(211, 111, 111));
+    padding: 0;
+    margin: 0;
+}
+
+#searchbar_wrapper {
     position: absolute;
     position: absolute;
-    top: 50%;
+    top: 27.5%;
     width: 100%;
     display: grid;
     justify-content: center;
 }
 
-#searchbar {
+#searchbar{
     background: #fff;
     width: 500px;
-    height: 50px;
+    height: 40px;
     border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 90% 10%;
+
+}
+
+#searchbar_input {
     border: none;
     outline: none;
+    font-family: 'Nunito Sans', sans-serif; 
+    background: transparent;
+    font-size: 1rem;
+    margin: 0 0 0 1rem;
+}
+
+#search_icon{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to bottom right, rgb(76, 130, 175), rgb(211, 111, 111));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#shortcuts_wrapper{
+    height: 45%;
+    position: absolute;
+    top: 37.5%;
+    width: 70%;
+    margin: 0 15%;
+}
+
+#shortcuts_body{
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template: 50% 50%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.shortcut_item{
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.shortcut_item a{
+    text-decoration: none;
+}
+
+.shortcut_item:hover{
+    background: rgba(0, 0, 0, 0.281);
+    border-radius: 15px;
+}
+
+.shortcut_icon{
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    margin: 0 auto 1rem auto;
+    background-color: #fff;
+    line-height: 3rem;
+}
+
+.shortcut_icon i{
+    background-image: linear-gradient(to bottom right, rgb(76, 130, 175), rgb(211, 111, 111));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.shortcut_text{
+    font-size: 0.9rem;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
 }
 
 #settings_icon{
     bottom: 0;
-    margin: 1rem;
+    left: 0;
+    height: 1.15rem;
+    width: 1.15rem;
     position: absolute;
-    color: #fff;
-    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.15rem;
+    margin: 0 0 1.25rem 1.25rem;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    cursor: pointer;
 }
 
-#arrow_up{
-    color: #fff;
-    position: absolute;
+#settings_icon:hover{
+    transform: rotate(30deg);
+    height: 1.15rem;
+    width: 1.15rem;
     bottom: 0;
-    margin: 0 10% 1rem auto;
-    font-size: 1.75rem;
-    left: 50%;
+    left: 0;
+    font-size: 1.15rem;
+    color: #fff;
 }
 
-#todo_list{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.25rem;
-    background-color: #fff;
-    padding: 0.5rem 4rem;
-    border-radius: 10px 10px 0 0;
-    margin: 0 3rem 0 0;
+@media screen and (min-width: 1000px){
+    #searchbar{
+        width: 650px;
+    }   
+
+    #shortcuts_wrapper{
+        width: 60%;
+        margin: 0 20%;   
+    }
+
+    .shortcut_item{
+        margin: 1rem 1rem;
+        padding: 1.5rem 0.5rem;
+    }
 }

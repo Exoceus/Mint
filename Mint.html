@@ -5,21 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
-        rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
     <title>New Tab</title>
 </head>
 
 <body>
-    <h2 id="brand_name">Mint</h2>
-    <div class="searchbar_wrapper">
-        <input type="text" id="searchbar">
+    <nav>
+        <div id="hamburger_menu">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </div>
+        <div id="user_info">
+            <div id="username">Jatin Mehta</div>
+            <div id="user_icon"><span></span></div>
+        </div>
+    </nav>
+    <div id="sidebar">
+
     </div>
+
+    <h2 id="brand_name">Mint</h2>
+    <div id="searchbar_wrapper">
+        <div id="searchbar">
+            <input type="text" id="searchbar_input" placeholder="Search apps, bookmarks or the web">
+            <i class="fas fa-search" id="search_icon"></i>
+        </div>
+    </div>
+
+    <div id="shortcuts_wrapper">
+        <div id="shortcuts_body">
+            <div class="shortcut_item">
+                <a href="chrome-search://local-ntp/local-ntp.html">
+                    <div class="shortcut_icon"><i class="fab fa-chrome"></i></div>
+                    <div class="shortcut_text">Google Chrome</div>
+                </a>
+            </div>
+            <div class="shortcut_item">
+                <a href="https://docs.google.com/document/u/1/?tgif=c">
+                    <div class="shortcut_icon"><i class="fas fa-file"></i></div>
+                    <div class="shortcut_text">Google Docs</div>
+                </a>
+            </div>
+            <div class="shortcut_item">
+                <a href="https://classroom.google.com/u/1/h">
+                    <div class="shortcut_icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="shortcut_text">Google Class</div>
+                </a>
+            </div>
+            <div class="shortcut_item">
+                <a href="https://mail.google.com/mail/u/0/">
+                    <div class="shortcut_icon"><i class="far fa-envelope"></i></div>
+                    <div class="shortcut_text">Gmail</div>
+                </a>
+            </div>
+            <div class="shortcut_item"><a href="https://outlook.live.com/mail/">
+                    <div class="shortcut_icon"><i class="far fa-envelope"></i></div>
+                    <div class="shortcut_text">Outlook</div>
+                </a>
+            </div>
+            <div class="shortcut_item">
+                <a href="https://github.com/">
+                    <div class="shortcut_icon"><i class="fab fa-github"></i></div>
+                    <div class="shortcut_text">Github</div>
+                </a>
+            </div>
+            <div class="shortcut_item">
+                <a href="https://www.youtube.com/">
+                    <div class="shortcut_icon"><i class="fab fa-youtube"></i></div>
+                    <div class="shortcut_text">Youtube</div>
+                </a>
+            </div>
+            <div class="shortcut_item">
+                <a href="https://codein.withgoogle.com/">
+                    <div class="shortcut_icon"><i class="fas fa-code"></i></div>
+                    <div class="shortcut_text">Google Code In</div>
+                </a>
+            </div>
+        </div>
+        <div id="shortcut_page_toggle_wrapper">
+            <div id="shortcut_page_toggle"></div>
+        </div>
+    </div>
+
     <div id="settings_icon" class="icon"><i class="fas fa-cog"></i></div>
-    <div id="arrow_up"><i class="far fa-arrow-alt-circle-up"></i></div>
-    <div id="todo_list">To-do List/Notes</div>
 </body>
 
 </html>
